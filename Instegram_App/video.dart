@@ -40,7 +40,7 @@ class _VideoScreenState extends State<VideoScreen> {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          // الفيديو
+ 
           Center(
             child: controller.value.isInitialized
                 ? AspectRatio(
@@ -124,4 +124,5 @@ class _VideoScreenState extends State<VideoScreen> {
     );
   }
 }
+
 
