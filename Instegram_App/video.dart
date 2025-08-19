@@ -92,7 +92,7 @@ class _VideoScreenState extends State<VideoScreen> {
             children: [
             CircleAvatar(
             radius: 24,
-            backgroundImage:NetworkImage("https://picsum.photos/200/300"), // غيريها للصورة بتاعتك
+            backgroundImage:NetworkImage("https://picsum.photos/200/300"), 
             ),
             const SizedBox(width: 10),
             Column(
@@ -124,3 +124,4 @@ class _VideoScreenState extends State<VideoScreen> {
     );
   }
 }
+
