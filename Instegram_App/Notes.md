@@ -17,19 +17,18 @@ Container(
   ),
 )
 <!-- بيعمل شكل دائري فيه صورة، وبراها Gradient زي Instagram Story -->
+
+
 🔄 Transform.rotate
-dart
-Copy
-Edit
+
 Transform.rotate(
   angle: -10,
   child: Icon(Icons.link),
 )
 <!-- بستخدمها عشان ألف أي Widget بزاوية معينة -->
+
 📑 TabBar + TabBarView
-dart
-Copy
-Edit
+
 TabBar(
   controller: _tabController,
   indicator: BoxDecoration(
@@ -54,11 +53,11 @@ Expanded(
   ),
 )
 <!-- TabBar للتنقل بين الصفحات، TabBarView للـ Content -->
+
+
 📦 GridView vs ListView
 ListView.builder
-dart
-Copy
-Edit
+
 ListView.builder(
   itemCount: items.length,
   itemBuilder: (context, index) {
@@ -67,9 +66,7 @@ ListView.builder(
 )
 <!-- بيعرض عناصر في عمود واحد -->
 GridView.builder
-dart
-Copy
-Edit
+
 GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 3,
@@ -89,10 +86,9 @@ ListView = عمود واحد.
 
 GridView = شبكة (Rows + Columns).
 
+
+
 🎥 video_player Package
-dart
-Copy
-Edit
 controller = VideoPlayerController.networkUrl(Uri.parse(videoUrl))
   ..initialize().then((_) {
     setState(() {
@@ -110,10 +106,9 @@ controller.value.isInitialized
   ? VideoPlayer(controller)
   : CircularProgressIndicator();
 <!-- الفيديو محتاج initialize() قبل التشغيل، و dispose() عشان الموارد تتحرر -->
+
+
 🌐 API (GET Request)
-dart
-Copy
-Edit
 final url = Uri.parse("https://api.com/data");
 final res = await http.get(url);
 final json = jsonDecode(res.body) as Map;
@@ -131,27 +126,25 @@ final json = jsonDecode(res.body) as Map;
 
 مش محتاج Threads، Flutter بيشتغل Async بـ Future.
 
+
+
 🛠️ Extra Tricks اتعلمتها
 🔹 Passing Data to StatefulWidget
-dart
-Copy
-Edit
 class User extends StatefulWidget {
   final Map info;
   const User({super.key, required this.info});
 
   @override
   State<User> createState() => _UserState();
+
 }
 🔹 التعامل مع Null Safety
-dart
-Copy
-Edit
+
+
 String? name = widget.info['username'] ?? "Guest";
+
 🔹 تجنب RangeError
-dart
-Copy
-Edit
+
 if (followers.length > 100) {
   followers[100]['profile_pic_url_hd'];
 }
